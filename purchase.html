@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Acheter — Vinted Bot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <section class="panel">
+      <div id="bgOrb" aria-hidden="true"></div>
+      <div class="row" style="align-items:center;justify-content:space-between">
+        <div class="brand">
+          <img src="/Fulogovbot.png" alt="V-BOT logo" width="36" height="36" style="border-radius:6px;object-fit:contain" aria-hidden="true">
+          <div>
+            <div class="title">Vinted Bot — Achat</div>
+            <div class="subtitle">Licence unique — 25€</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <a class="btn ghost" href="index.html">Retour</a>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <h3 style="margin:6px 0 8px">Finaliser l'achat</h3>
+          <p class="small-muted">Cliquez sur "Acheter" pour simuler le paiement. Après achat, le bouton Télécharger s'activera et le lien de téléchargement sera affiché.</p>
+
+          <div style="display:flex;gap:10px;margin-top:10px">
+            <button id="purchaseBtn" class="btn primary" style="min-width:140px">Acheter — 25€</button>
+            <a id="purchaseDownload" class="btn" href="#" download="vinted-bot-windows.exe" style="display:none;min-width:160px">Télécharger (Windows)</a>
+          </div>
+        </div>
+
+        <div style="width:360px;min-width:240px">
+          <div class="results" style="height:220px;display:flex;align-items:center;justify-content:center">
+            <div style="text-align:center;max-width:320px">
+              <div style="font-weight:800;font-size:16px;margin-bottom:6px">Licence unique — Pas d'abonnement</div>
+              <div class="small-muted">Une installation locale sur votre machine. Vous recevrez un code de licence après achat.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer" style="margin-top:auto">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div class="small-muted">Paiement sécurisé • Licence non remboursable après téléchargement.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="pingSound" src="assets/ping.mp3" preload="auto"></audio>
+
+  <script>
+    // Simple local purchase simulation for this page
+    const purchaseBtn = document.getElementById('purchaseBtn');
+    const purchaseDownload = document.getElementById('purchaseDownload');
+    const ping = document.getElementById('pingSound');
+
+    purchaseBtn && purchaseBtn.addEventListener('click', () => {
+      purchaseBtn.disabled = true;
+      purchaseBtn.textContent = 'Traitement…';
+      setTimeout(() => {
+        purchaseBtn.textContent = 'Acheté';
+        purchaseDownload.style.display = 'inline-block';
+        purchaseDownload.href = 'https://example.com/downloads/vinted-bot-windows.exe';
+        try { ping.currentTime = 0; ping.play(); } catch(e){}
+        alert('Achat effectué — lien de téléchargement activé.');
+      }, 1200);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Vinted Bot — Présentation</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Vinted Bot — Recevez des alertes instantanées pour les meilleures annonces Vinted. Achetez et téléchargez l'app Windows.">
+</head>
+<body>
+  <main id="app">
+    <section class="panel">
+      <div id="bgOrb" aria-hidden="true"></div>
+      <div class="row" style="align-items:flex-start">
+        <div class="brand">
+          <img src="/Fulogovbot.png" alt="V-BOT logo" width="36" height="36" style="border-radius:6px;object-fit:contain" aria-hidden="true">
+          <div>
+            <div class="title" style="font-size:18px">Vinted Bot</div>
+            <div class="subtitle">Alertes instantanées pour bonnes affaires</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-direction:column;align-items:flex-end">
+          <div class="price" style="font-size:14px;font-weight:600;color:var(--muted)">Licence unique — 25€ (aucun abonnement)</div>
+          <div style="display:flex;gap:8px">
+            <a id="buyBtn" class="btn primary" href="purchase.html">Acheter</a>
+            <a id="freeDownloadBtn" class="btn ghost" href="https://example.com/downloads/vinted-bot-windows-gratuit.exe">Télécharger version gratuite</a>
+            <a id="downloadBtn" class="btn" href="#" download="vinted-bot-windows.exe" style="display:none">Télécharger (Windows)</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start">
+        <div style="flex:1.6;min-width:260px">
+          <h3 style="margin:6px 0 8px">Ce que fait l'application</h3>
+          <ul class="list" style="padding-left:18px; margin:0 0 12px">
+            <li>Surveille les nouvelles annonces correspondant à vos mots-clés</li>
+            <li>Filtre par prix maximal</li>
+            <li>Notifications de bureau et son paramétrable</li>
+            <li>Téléchargement et installation sur Windows</li>
+          </ul>
+
+          <h4 style="margin:8px 0">Pourquoi choisir Vinted Bot</h4>
+          <p class="small-muted" style="margin:0 0 12px">Gagnez du temps et soyez les premiers informés des bonnes affaires pour augmenter vos chances d'achat.</p>
+
+          
+
+          <section class="full-info">
+            <h3 style="margin:18px 0 8px">Bot le moins cher du marché</h3>
+            <p class="small-muted" style="margin:0 0 10px">
+              S'exécute localement sur votre ordinateur ou smartphone — autonomie totale pour éviter une panne globale et garder vos alertes actives.
+            </p>
+            <ul class="list" style="padding-left:18px; margin:0">
+              <li>Fonctionnement local (aucun serveur central nécessaire)</li>
+              <li>Conçu pour tolérance aux pannes et redémarrage automatique</li>
+              <li>Licence unique — installation Windows (.exe) incluse</li>
+            </ul>
+            <p class="small-muted" style="margin:12px 0 0;font-size:13px">
+              Téléchargement pour Windows (.exe). Après achat vous recevrez le lien de téléchargement immédiat et un code de licence.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <div class="compare-wrap" style="margin-top:12px">
+        <table class="compare-table" role="table" aria-label="Comparatif versions">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Gratuit</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature">Recherches simultanées</td>
+              <td class="center">2</td>
+              <td class="center">Illimité</td>
+            </tr>
+            <tr>
+              <td class="feature">Notifications</td>
+              <td class="center">Dans l'application</td>
+              <td class="center">Windows (hors app) + mobile</td>
+            </tr>
+            <tr>
+              <td class="feature">Support</td>
+              <td class="center">—</td>
+              <td class="center">Prioritaire</td>
+            </tr>
+            <tr>
+              <td class="feature">Mises à jour</td>
+              <td class="center">Gratuites</td>
+              <td class="center">Fonctionnalités en avant‑première</td>
+            </tr>
+            <tr>
+              <td class="feature">Demandes de fonctionnalité</td>
+              <td class="center">—</td>
+              <td class="center">Accès Discord pour demandes</td>
+            </tr>
+            <tr>
+              <td class="feature">Prix</td>
+              <td class="center">0€</td>
+              <td class="center">25€ licence unique — aucun abonnement</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="footer" style="margin-top:auto">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div class="small-muted">Paiement sécurisé • Support par email</div>
+          <div class="small-muted" style="font-size:12px">Licence non remboursable après téléchargement (voir conditions).</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button id="termsBtn" class="btn">Conditions</button>
+          <button id="contactBtn" class="btn">Contact / Support</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="pingSound" src="assets/ping.mp3" preload="auto"></audio>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
