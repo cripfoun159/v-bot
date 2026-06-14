@@ -3,9 +3,6 @@
 const qs = s => document.querySelector(s);
 const buyBtn = qs('#buyBtn'); // may be <a> on index (navigates) or <button> on purchase page
 const downloadBtn = qs('#downloadBtn');
-
-const contactBtn = qs('#contactBtn');
-const termsBtn = qs('#termsBtn');
 const ping = qs('#pingSound');
 
 function simulatePurchaseFlow(){
@@ -16,7 +13,7 @@ function simulatePurchaseFlow(){
     // After "payment", show download link and play a success sound
     buyBtn.textContent = 'Acheté';
     downloadBtn.style.display = 'inline-block';
-    downloadBtn.href = 'https://example.com/downloads/vinted-bot-windows.exe';
+    downloadBtn.href = 'https://example.com/downloads/v-wacht-windows.exe';
     try { ping.currentTime = 0; ping.play(); } catch(e){}
     alert('Achat effectué — lien de téléchargement activé.');
   }, 1400);
@@ -25,7 +22,7 @@ function simulatePurchaseFlow(){
 
 
 function contactSupport(){
-  window.location.href = 'mailto:support@example.com?subject=Support%20Vinted%20Bot';
+  window.location.href = 'mailto:support@example.com?subject=Support%20V-Wacht';
 }
 
 function showTerms(){
@@ -36,8 +33,7 @@ if (buyBtn && buyBtn.tagName === 'BUTTON') {
   buyBtn.addEventListener('click', simulatePurchaseFlow);
 }
 
-contactBtn.addEventListener('click', contactSupport);
-termsBtn.addEventListener('click', showTerms);
+
 
 /* Quick accessibility: show download if a special key present (for demo/testing) */
 if (location.search.includes('demo=1')) {

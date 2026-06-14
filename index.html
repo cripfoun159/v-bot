@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Vinted Bot — Présentation</title>
+  <title>V-Wacht — Présentation</title>
   <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Vinted Bot — Recevez des alertes instantanées pour les meilleures annonces Vinted. Achetez et téléchargez l'app Windows.">
+  <meta name="description" content="V-Wacht — Recevez des alertes instantanées pour les meilleures annonces Vinted. Achetez et téléchargez l'app Windows.">
 </head>
 <body>
   <main id="app">
@@ -13,18 +13,21 @@
       <div id="bgOrb" aria-hidden="true"></div>
       <div class="row" style="align-items:flex-start">
         <div class="brand">
-          <img src="/Fulogovbot.png" alt="V-BOT logo" width="36" height="36" style="border-radius:6px;object-fit:contain" aria-hidden="true">
+          <img src="/68094361-27c0-4772-8ed6-904051597c3c.png" alt="Nouveau logo V" width="36" height="36" style="border-radius:6px;object-fit:contain" aria-hidden="true">
           <div>
-            <div class="title" style="font-size:18px">Vinted Bot</div>
+            <div class="title" style="font-size:18px">V-Wacht</div>
             <div class="subtitle">Alertes instantanées pour bonnes affaires</div>
           </div>
         </div>
         <div style="display:flex;gap:10px;flex-direction:column;align-items:flex-end">
           <div class="price" style="font-size:14px;font-weight:600;color:var(--muted)">Licence unique — 25€ (aucun abonnement)</div>
-          <div style="display:flex;gap:8px">
-            <a id="buyBtn" class="btn primary" href="purchase.html">Acheter</a>
-            <a id="freeDownloadBtn" class="btn ghost" href="https://example.com/downloads/vinted-bot-windows-gratuit.exe">Télécharger version gratuite</a>
-            <a id="downloadBtn" class="btn" href="#" download="vinted-bot-windows.exe" style="display:none">Télécharger (Windows)</a>
+          <div style="display:flex;gap:8px;align-items:center">
+            <a id="buyBtn" class="btn primary" href="https://ko-fi.com/s/203f5c750e">Acheter</a>
+            <a id="freeDownloadBtn" class="btn ghost" href="https://example.com/downloads/v-wacht-windows-gratuit.exe">Télécharger version gratuite</a>
+            <a id="downloadBtn" class="btn" href="#" download="v-wacht-windows.exe" style="display:none">Télécharger (Windows)</a>
+            <div class="video-wrap" style="display:inline-block;min-width:220px;max-width:420px;">
+              <a id="openVideoBtn" class="btn ghost" href="#video" title="Ouvrir la vidéo de présentation" style="display:inline-flex;align-items:center;gap:8px">Voir la vidéo de présentation</a>
+            </div>
           </div>
         </div>
       </div>
@@ -47,7 +50,10 @@
           <section class="full-info">
             <h3 style="margin:18px 0 8px">Bot le moins cher du marché</h3>
             <p class="small-muted" style="margin:0 0 10px">
-              S'exécute localement sur votre ordinateur ou smartphone — autonomie totale pour éviter une panne globale et garder vos alertes actives.
+              Ce bot a pour objectif d'être le moins cher du marché et le restera toujours. Toutes les mises à jour seront gratuites après l'achat.
+            </p>
+            <p class="small-muted" style="margin:0 0 10px">
+              L'application s'exécute entièrement en local sur votre ordinateur — aucun serveur distant n'est hébergé, ce qui garantit que l'app continuera de fonctionner sur votre PC quoi qu'il arrive.
             </p>
             <ul class="list" style="padding-left:18px; margin:0">
               <li>Fonctionnement local (aucun serveur central nécessaire)</li>
@@ -57,6 +63,13 @@
             <p class="small-muted" style="margin:12px 0 0;font-size:13px">
               Téléchargement pour Windows (.exe). Après achat vous recevrez le lien de téléchargement immédiat et un code de licence.
             </p>
+
+            <!-- Embedded YouTube presentation (responsive) -->
+            <div id="video" style="margin-top:14px;display:flex;justify-content:center">
+              <div class="embed">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jyHX-UppLjM" title="Présentation V-Wacht" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -66,8 +79,8 @@
           <thead>
             <tr>
               <th></th>
-              <th>Gratuit</th>
-              <th>Pro</th>
+              <th class="center">Gratuit</th>
+              <th class="center">Pro</th>
             </tr>
           </thead>
           <tbody>
@@ -107,13 +120,10 @@
 
       <div class="footer" style="margin-top:auto">
         <div style="display:flex;flex-direction:column;gap:6px">
-          <div class="small-muted">Paiement sécurisé • Support par email</div>
+          <div class="small-muted">Paiement sécurisé</div>
           <div class="small-muted" style="font-size:12px">Licence non remboursable après téléchargement (voir conditions).</div>
         </div>
-        <div style="display:flex;gap:8px;align-items:center">
-          <button id="termsBtn" class="btn">Conditions</button>
-          <button id="contactBtn" class="btn">Contact / Support</button>
-        </div>
+
       </div>
     </section>
   </main>
