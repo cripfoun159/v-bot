@@ -1,2 +1,2 @@
-# v-bot
-vinted bot 
+# v watch
+vinted watch  bot 
